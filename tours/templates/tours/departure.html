@@ -3,8 +3,7 @@
 
 
 {% block title %}
-{% include 'tours/index.html' %}
-{% include 'tours/tour.html' %}
+
   <main class="container mt-3">
     <h1 class="display-5 mt-4">Летим {{ departure }}</h1>
     <p class="mb-4">Найдено {{ tours_number }} туров, от {{ min_price }} до {{ max_price }} и от {{ min_nights }} ночей до
@@ -18,7 +17,7 @@
           <div class="card-body">
             <h2 class="h5 card-title">{{ tour.title }}</h2>
             <p class="card-text">{{ tour.description }}</p>
-            <a href="#" class="btn btn-sm btn-primary">Подробнее</a>
+            <a href="{% url 'tour_view' tour.key %}" class="btn btn-sm btn-primary">Подробнее</a>
           </div>
         </div>
       </div>
