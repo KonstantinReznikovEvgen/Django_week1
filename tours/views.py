@@ -306,10 +306,11 @@ def departure_view(request, departure):
             min_nights = min(nights)
             max_nights = max(nights)
             id_tours.append(i)
+    departure = departures[departure]
     particular_tours = [tours[key] for key in random.sample(id_tours, tours_number)]
     context = {'tours': particular_tours, 'min_price': min_price, 'max_price': max_price,
                'max_nights': max_nights, 'min_nights': min_nights, 'tours_number': tours_number,
-               'departure': departure}
+               'departure': departure, 'cities': departures}
 
     return render(request, 'tours/departure.html', context=context)
 
