@@ -1,1 +1,1 @@
-web: gunicorn venv\Lib\site-packages\gunicorn\app.wsgi
+web: gunicorn stepik_tours.wsgi
