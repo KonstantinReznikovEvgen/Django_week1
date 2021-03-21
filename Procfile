@@ -1,0 +1,1 @@
+web: gunicorn venv\Lib\site-packages\gunicorn\app.wsgi
